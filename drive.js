@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const Blynk = require('/usr/lib/node_modules/blynk-library');
-const b = require('bonescript');
+const b = require('/usr/lib/node_modules/bonescript');
 const util = require('util');
 
 const leftForward = 'P9_29';
