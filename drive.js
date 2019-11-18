@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-const Blynk = require('/usr/local/lib/node_modules/blynk-library');
+const Blynk = require('/usr/lib/node_modules/blynk-library');
 const b = require('bonescript');
 const util = require('util');
 
@@ -21,6 +21,7 @@ var joy = new blynk.VirtualPin(0);
 var x = 0;
 var y = 0;
 
+
 joy.on('write', function(param) {
 	x = param[0];
 	y = param[1];
@@ -33,7 +34,7 @@ function drive(x, y) {
 
 	var opp_y = y * -1;
 
-	if (y <= 0) {
+	if (y == 0) {
 		b.analogWrite(rightForward, 0);
 		b.analogWrite(rightBackward, 0);
 
