@@ -33,13 +33,14 @@ var y = 0;
 var autopilot = 0;
 
 var timer;
-var _DELAY = 100;
+var _DELAY = 750;
 
 joy.on('write', function(param) {
 	x = param[0];
 	y = param[1];
-
-	drive(x, y);
+	if (autopilot == 0) {
+		drive(x, y);
+	}
 });
 
 autoswitch.on('write', function(param) {

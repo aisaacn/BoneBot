@@ -6,6 +6,7 @@ config-pin P9_29 output
 config-pin P9_30 output
 
 config-pin P9_26 gpio
+config-pin P9_25 gpio
 
 while ! ping -c 1 -W 1 google.com; do
 	echo 'Waiting for connection'
